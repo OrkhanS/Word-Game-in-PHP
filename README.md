@@ -24,11 +24,11 @@ Here, I just asked the user, words and translations and then send them to server
 ```php 
 //server3.php
 $sql = "INSERT INTO words (az, eng, user_id) VALUES('$words', '$words_az', '$user_id')";
-		include 'insertingwords.php';
-		if (mysqli_query($con, $sql) === TRUE) 
-		{
-		    echo "New record created successfully";
-		} 
+include 'insertingwords.php';
+if (mysqli_query($con, $sql) === TRUE) 
+{
+    echo "New record created successfully";
+} 
 ```
 #### oyun_server.php
 In insertingwords.php file, if the user clicks to **Play Game** button, it will be directed to oyun.php file where they choose the language that they want to answer questions and with form tag, application goes to oyun_server.php. This file gets the words of the user and sends them to oyun_main.php in specific order he/she wants. 
